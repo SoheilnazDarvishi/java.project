@@ -23,3 +23,13 @@ public static void main(String[] args){
         }
         return count;
     }
+    public static int substringCount(String s, String substring) {
+        int count = 0;
+        int index = s.indexOf(substring);
+        while (index >= 0) {
+            count++;
+            index = s.indexOf(substring, index + 1);
+        }
+        return count;
+    }
+} 
